@@ -1,7 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const DigitalClock = () => {
-  return <div>DigitalClock</div>;
+  const [time, setTime] = useState("hello");
+
+  const updateTime = () => {
+    const date = new Date();
+    const hours = date.getHours().toString().padStart(2, "");
+    const minutues = date.getMinutes().toString().padStart(2, "0");
+    const seconds = date.getSeconds().toString().padStart(2, "0");
+    setTime(`${hours}:${minutues}:${seconds}`);
+  };
+
+  useEffect(() => {
+    const timer = setInterval(updateTime, 1000);
+    return () => clearInterval(timer);
+  }, []);
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+      }}
+    >
+      <div>time is {time}</div>
+    </div>
+  );
 };
 
 export default DigitalClock;

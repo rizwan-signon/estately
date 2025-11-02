@@ -1,11 +1,9 @@
-import React from "react";
-import AdvancedSearch from "./components/AdvancedSearch";
+import React, { useState } from "react";
 import DigitalClock from "./components/DigitalClock";
 
 const App = () => {
   return (
     <div>
-      <AdvancedSearch />
       <DigitalClock />
     </div>
   );
