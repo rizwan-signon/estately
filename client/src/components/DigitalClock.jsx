@@ -22,7 +22,6 @@ const DigitalClock = () => {
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
-        background: "aqua",
       }}
     >
       <div>time is {time}</div>
