@@ -21,10 +21,12 @@ const DigitalClock = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "100vh",
+        height: "90vh",
       }}
     >
-      <div>time is {time}</div>
+      <div style={{ fontsize: "50px", fontWeight: "bold" }}>
+        <h1>time is {time}</h1>
+      </div>
     </div>
   );
 };
